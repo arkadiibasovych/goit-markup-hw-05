@@ -531,10 +531,6 @@ img {
   font-size: 18px;
 }
 
-.gallery-list-image {
-  margin-bottom: 30px;
-}
-
 .gallery-list-title,
 .gallery-list-subtitle {
   padding-left: 24px;
@@ -564,6 +560,12 @@ img {
 
 .gallery-list-link-image {
   position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.gallery-list-link-image:hover .gallery-list-description {
+  transform: translateY(0);
 }
 
 .gallery-list-description {
@@ -571,9 +573,13 @@ img {
   top: 0;
   left: 0;
 
-  width: auto;
-  height: auto;
-  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+
+  margin: 0px;
   padding-top: 63px;
   padding-right: 24px;
   padding-bottom: 63px;
