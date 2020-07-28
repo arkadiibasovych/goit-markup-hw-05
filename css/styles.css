@@ -115,6 +115,24 @@ img {
   color: #212121;
 }
 
+.navigation-list-item {
+  position: relative;
+}
+
+.navigation-list-link:hover::after,
+.navigation-list-link:focus::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
 .navigation-list-item:not(:last-child) {
   margin-right: 50px;
 }
