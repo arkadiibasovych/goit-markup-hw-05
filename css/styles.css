@@ -72,10 +72,6 @@ img {
   margin-right: 10px;
 }
 
-.social-list-item-svg {
-  fill: ;
-}
-
 .active {
   color: var(--accent-color);
 }
@@ -118,6 +114,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   color: #212121;
+  transition: color 250ms var(--timing-function);
 }
 
 .navigation-list-item {
@@ -169,11 +166,13 @@ img {
 
 .adress-list-link {
   color: #757575;
+  transition: color 250ms var(--timing-function);
 }
 
 .address-list-item-svg {
   margin-right: 10px;
   fill: #757575;
+  transition: fill 250ms var(--timing-function);
 }
 
 .navigation-list-link:hover,
@@ -252,7 +251,15 @@ img {
   background-color: var(--accent-color);
   border: none;
   border-radius: 4px;
+
+  transition: background-color 250ms var(--timing-function);
 }
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #188ce8;
+}
+
 /* Особенности */
 
 .features {
