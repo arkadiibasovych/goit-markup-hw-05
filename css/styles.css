@@ -429,6 +429,7 @@ img {
 .team .social-link {
   background-color: #ffffff;
   border-radius: 50%;
+  transition: background-color 250ms var(--timing-function);
 }
 
 .team .social-link:hover,
@@ -438,6 +439,7 @@ img {
 
 .team .social-list-item-svg {
   fill: #afb1b8;
+  transition: fill 250ms var(--timing-function);
 }
 
 .team .social-link:hover .social-list-item-svg,
