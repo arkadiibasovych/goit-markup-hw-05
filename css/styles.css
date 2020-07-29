@@ -467,6 +467,7 @@ img {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  transition: border 250ms var(--timing-function);
 }
 
 .clients-list-item:not(:last-child) {
@@ -475,6 +476,7 @@ img {
 
 .clients-list-link-svg {
   fill: #afb1b8;
+  transition: fill 250ms var(--timing-function);
 }
 
 .clients-list-link:hover,
@@ -520,6 +522,8 @@ img {
   border: none;
   border-radius: 4px;
   outline: none;
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
 .filter-list-item-btn:hover,
 .filter-list-item-btn:focus {
