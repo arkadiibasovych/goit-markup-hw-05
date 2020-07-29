@@ -14,6 +14,7 @@ html {
   --title-color: #212121;
   --desription-color: #757575;
   --accent-color: #2196f3;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   background-color: #ffffff;
@@ -75,6 +76,10 @@ img {
   fill: ;
 }
 
+.active {
+  color: var(--accent-color);
+}
+
 /* Шапка */
 
 .navigation {
@@ -119,8 +124,11 @@ img {
   position: relative;
 }
 
-.navigation-list-link:hover::after,
-.navigation-list-link:focus::after {
+.current {
+  color: var(--accent-color);
+}
+
+.current::after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -131,6 +139,8 @@ img {
   height: 4px;
   background: var(--accent-color);
   border-radius: 2px;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .navigation-list-item:not(:last-child) {
@@ -595,7 +605,7 @@ img {
   height: 100%;
 
   transform: translateY(100%);
-  transition: transform 250ms ease;
+  transition: transform 250ms var(--timing-function);
 
   margin: 0px;
   padding-top: 63px;
